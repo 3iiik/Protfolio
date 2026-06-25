@@ -1,5 +1,10 @@
+"use client";
+
+import { useLanguage } from "@/context/LanguageContext";
+
 export default function Footer() {
   const year = new Date().getFullYear();
+  const { t } = useLanguage();
 
   return (
     <footer className="border-t border-border bg-white">
@@ -11,32 +16,30 @@ export default function Footer() {
                 3iik <span className="font-light text-muted">Studio</span>
               </span>
               <span className="text-[10px] font-medium tracking-wider text-primary uppercase">
-                Web Design &amp; Development
+                {t("header.subtitle")}
               </span>
             </a>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted">
-              Modern Websites for Algerian Businesses. I help businesses get fast,
-              modern, and mobile-friendly websites that attract customers and build
-              trust.
+              {t("footer.description")}
             </p>
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold text-foreground">Quick Links</h4>
+            <h4 className="text-sm font-semibold text-foreground">{t("footer.quickLinks")}</h4>
             <ul className="mt-4 space-y-3">
               {[
-                { label: "Services", href: "#services" },
-                { label: "Projects", href: "#projects" },
-                { label: "Pricing", href: "#pricing" },
-                { label: "FAQ", href: "#faq" },
-                { label: "Contact", href: "#contact" },
+                { key: "services", href: "#services" },
+                { key: "projects", href: "#projects" },
+                { key: "pricing", href: "#pricing" },
+                { key: "faq", href: "#faq" },
+                { key: "contact", href: "#contact" },
               ].map((link) => (
-                <li key={link.label}>
+                <li key={link.key}>
                   <a
                     href={link.href}
                     className="text-sm text-muted transition-colors hover:text-foreground"
                   >
-                    {link.label}
+                    {t(`nav.${link.key}`)}
                   </a>
                 </li>
               ))}
@@ -44,7 +47,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold text-foreground">Connect</h4>
+            <h4 className="text-sm font-semibold text-foreground">{t("footer.connect")}</h4>
             <ul className="mt-4 space-y-3">
               <li>
                 <a
@@ -70,7 +73,7 @@ export default function Footer() {
 
         <div className="border-t border-border py-6">
           <p className="text-center text-xs text-muted">
-            &copy; {year} 3iik Studio. All rights reserved.
+            &copy; {year} 3iik Studio. {t("footer.copyright")}
           </p>
         </div>
       </div>

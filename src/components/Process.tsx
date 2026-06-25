@@ -1,50 +1,24 @@
-const steps = [
-  {
-    number: "01",
-    title: "Discovery",
-    description:
-      "I learn about your business, goals, target audience, and what you want your website to achieve. We discuss design preferences and functionality needs.",
-  },
-  {
-    number: "02",
-    title: "Design",
-    description:
-      "I create wireframes and a visual design concept for your website. You review and provide feedback until everything looks perfect.",
-  },
-  {
-    number: "03",
-    title: "Development",
-    description:
-      "I build your website using modern technologies. The site is responsive, fast, and fully functional. I keep you updated throughout the process.",
-  },
-  {
-    number: "04",
-    title: "Launch",
-    description:
-      "After your approval, I deploy the website to your domain. I handle all the technical setup so you can focus on running your business.",
-  },
-  {
-    number: "05",
-    title: "Support",
-    description:
-      "I provide ongoing support and maintenance. Whether you need updates, new features, or just have questions, I am here to help.",
-  },
-];
+"use client";
+
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Process() {
+  const { t, tm } = useLanguage();
+
+  const steps = (tm("process.steps") as { number: string; title: string; description: string }[]);
+
   return (
     <section className="bg-surface py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <span className="text-xs font-semibold tracking-widest text-primary uppercase">
-            How I Work
+            {t("process.label")}
           </span>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            From Idea to Launch
+            {t("process.heading")}
           </h2>
           <p className="mt-4 text-lg text-muted">
-            A simple, transparent process designed to get you results without
-            the hassle.
+            {t("process.description")}
           </p>
         </div>
 

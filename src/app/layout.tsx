@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { LanguageProvider } from "@/context/LanguageContext";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -15,22 +16,30 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "3iik Studio | Web Design & Development — Modern Websites for Algerian Businesses",
   description:
-    "Web design and development for Algerian businesses. Fast, professional, mobile-friendly websites that build trust and attract customers.",
+    "Professional web design and development for Algerian businesses. Fast, modern, mobile-friendly websites that build trust and attract customers.",
   keywords: [
     "web development",
+    "web design Algeria",
     "Algeria",
     "business websites",
     "freelance web developer",
     "3iik Studio",
-    "web design Algeria",
     "website designer Algeria",
+    "création site web Algérie",
+    "développeur web Algérie",
   ],
+  alternates: {
+    languages: {
+      fr: "/",
+      en: "/",
+    },
+  },
   openGraph: {
     title: "3iik Studio | Web Design & Development",
     description:
       "Modern websites for Algerian businesses. Professional web design and development services.",
     type: "website",
-    locale: "en_DZ",
+    locale: "fr_DZ",
     siteName: "3iik Studio",
   },
   twitter: {
@@ -52,11 +61,16 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="fr"
       className={`${geistSans.variable} ${geistMono.variable} antialiased`}
     >
+      <head>
+        <link rel="alternate" hrefLang="fr" href="/" />
+        <link rel="alternate" hrefLang="en" href="/" />
+        <link rel="alternate" hrefLang="x-default" href="/" />
+      </head>
       <body className="min-h-screen bg-background text-foreground">
-        {children}
+        <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
   );

@@ -1,0 +1,252 @@
+{
+  "site": {
+    "title": "3iik Studio | Web Design & Développement — Sites Web Modernes pour les Entreprises Algériennes",
+    "description": "Création de sites web professionnels pour les entreprises algériennes. Des sites rapides, modernes et adaptés aux mobiles qui inspirent confiance et attirent des clients.",
+    "ogTitle": "3iik Studio | Web Design & Développement",
+    "ogDescription": "Des sites web modernes pour les entreprises algériennes. Services professionnels de conception et développement web."
+  },
+  "nav": {
+    "services": "Services",
+    "projects": "Projets",
+    "pricing": "Tarifs",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "contactWhatsApp": "Contactez-moi sur WhatsApp"
+  },
+  "header": {
+    "subtitle": "Web Design & Développement"
+  },
+  "hero": {
+    "badge": "Web Design & Développement — Algérie",
+    "title": "Des Sites Web Modernes Qui Aident les Entreprises à",
+    "titleAccent": "Grandir",
+    "subtitle": "Des sites rapides, professionnels et adaptés aux mobiles, conçus pour inspirer confiance et attirer des clients. Obtenez un site web qui travaille aussi dur que vous.",
+    "viewProjects": "Voir les Projets",
+    "contactWhatsApp": "Contactez-moi sur WhatsApp"
+  },
+  "services": {
+    "label": "Ce que je propose",
+    "heading": "Services de Développement Web",
+    "description": "Des sites vitrines aux solutions avancées basées sur l'IA, je construis ce dont votre entreprise a besoin pour se développer en ligne.",
+    "items": [
+      {
+        "title": "Sites Web d'Entreprise",
+        "description": "Une présence en ligne professionnelle avec toutes les pages nécessaires : accueil, à propos, services, contact, et plus. Conçu pour convertir les visiteurs en clients.",
+        "benefits": ["Image de marque professionnelle", "Design centré sur le client", "Formulaires de contact & appels à l'action"]
+      },
+      {
+        "title": "Pages d'Atterrissage",
+        "description": "Des sites web mono-page à fort taux de conversion conçus pour les campagnes marketing, les lancements de produits ou la génération de leads. Rapides, ciblés et efficaces.",
+        "benefits": ["Taux de conversion élevé", "Ciblé par campagne", "Temps de chargement rapides"]
+      },
+      {
+        "title": "Sites Portfolio",
+        "description": "Mettez en valeur votre travail avec un portfolio époustouflant. Parfait pour les photographes, designers, artistes et professionnels créatifs.",
+        "benefits": ["Vitrine visuelle", "Attraction de clients", "Développement de marque"]
+      },
+      {
+        "title": "Solutions Web avec IA",
+        "description": "Intégrez des fonctionnalités intelligentes comme des chatbots, des recommandations personnalisées et une recherche avancée dans votre site web. Restez en avance sur la concurrence.",
+        "benefits": ["Automatisation intelligente", "Engagement utilisateur", "Avantage concurrentiel"]
+      },
+      {
+        "title": "Refontes de Sites Web",
+        "description": "Donnez à votre site existant un look moderne et frais. Améliorez les performances, l'expérience utilisateur et les taux de conversion sans perdre votre identité de marque.",
+        "benefits": ["Mise à jour moderne", "Meilleure UX", "Performances améliorées"]
+      }
+    ]
+  },
+  "whyChooseMe": {
+    "label": "Pourquoi me choisir",
+    "heading": "Ce qui me distingue",
+    "description": "Je combine des compétences techniques avec un véritable engagement pour la réussite de votre entreprise.",
+    "reasons": [
+      {
+        "title": "Livraison Rapide",
+        "description": "Votre site web opérationnel en quelques jours, pas en mois. Je respecte votre temps et vos délais."
+      },
+      {
+        "title": "Design Mobile d'Abord",
+        "description": "Chaque site est conçu d'abord pour le mobile. Vos visiteurs bénéficient d'une expérience parfaite sur tous les appareils."
+      },
+      {
+        "title": "UI/UX Moderne",
+        "description": "Des interfaces propres et professionnelles, faciles à naviguer et agréables à utiliser."
+      },
+      {
+        "title": "Structure SEO-Friendly",
+        "description": "Conçu pour les moteurs de recherche dès le premier jour. Votre site sera prêt à être référencé."
+      },
+      {
+        "title": "Communication Directe",
+        "description": "Vous parlez directement à moi, pas à une équipe commerciale. Une communication claire et honnête tout au long du projet."
+      },
+      {
+        "title": "Prix Abordables",
+        "description": "Des sites de qualité à des prix justes pour les entreprises algériennes. Sans frais cachés ni surprises."
+      },
+      {
+        "title": "Support Fiable",
+        "description": "Je garantis mon travail. Vous bénéficiez d'un support continu et de maintenance même après le lancement."
+      }
+    ]
+  },
+  "portfolio": {
+    "label": "Mon Travail",
+    "heading": "Projets Réalisés",
+    "description": "Des sites web que j'ai créés pour des entreprises de différents secteurs.",
+    "projects": [
+      {
+        "title": "Le Jardin Restaurant",
+        "category": "Site Restaurant",
+        "description": "Une présence digitale complète pour un restaurant haut de gamme avec menu interactif, système de réservation en ligne et galerie photos."
+      },
+      {
+        "title": "Atlas Fitness Club",
+        "category": "Site Fitness",
+        "description": "Un site moderne et dynamique pour une salle de sport premium avec horaires des cours, abonnements, profils des coachs et réservation."
+      },
+      {
+        "title": "SmileCare Dental",
+        "category": "Site Santé",
+        "description": "Un site professionnel pour un cabinet dentaire avec prise de rendez-vous en ligne, détails des services et avis patients."
+      }
+    ],
+    "liveDemo": "Démo en Direct",
+    "viewDetails": "Voir Détails"
+  },
+  "process": {
+    "label": "Comment je travaille",
+    "heading": "De l'Idée au Lancement",
+    "description": "Un processus simple et transparent conçu pour vous offrir des résultats sans complications.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Découverte",
+        "description": "J'apprends à connaître votre entreprise, vos objectifs, votre public cible et ce que vous voulez que votre site accomplisse."
+      },
+      {
+        "number": "02",
+        "title": "Design",
+        "description": "Je crée des maquettes et un concept visuel pour votre site. Vous examinez et donnez votre retour jusqu'à ce que tout soit parfait."
+      },
+      {
+        "number": "03",
+        "title": "Développement",
+        "description": "Je construis votre site avec les technologies modernes. Le site est responsive, rapide et entièrement fonctionnel."
+      },
+      {
+        "number": "04",
+        "title": "Lancement",
+        "description": "Après votre approbation, je déploie le site sur votre domaine. Je gère toute la configuration technique."
+      },
+      {
+        "number": "05",
+        "title": "Support",
+        "description": "Je fournis un support continu et de la maintenance. Besoin de mises à jour ? Je suis là pour vous aider."
+      }
+    ]
+  },
+  "pricing": {
+    "label": "Tarifs",
+    "heading": "Tarification Transparente",
+    "description": "Des sites de qualité à des prix justes. Sans frais cachés, sans surprises.",
+    "popular": "Le Plus Populaire",
+    "startingFrom": "À partir de",
+    "getStarted": "Commencer",
+    "disclaimer": "Le prix final dépend des exigences du projet, de la complexité et des fonctionnalités demandées. Contactez-moi pour un devis personnalisé gratuit.",
+    "plans": [
+      {
+        "name": "Starter",
+        "description": "Parfait pour les petites entreprises qui ont besoin d'une présence en ligne simple.",
+        "features": ["Jusqu'à 5 pages", "Responsive mobile", "Formulaire de contact", "SEO de base", "Livraison rapide"]
+      },
+      {
+        "name": "Business",
+        "description": "Idéal pour les entreprises en croissance qui veulent un avantage professionnel.",
+        "features": ["Design personnalisé", "Jusqu'à 10 pages", "Optimisation SEO", "Système de réservation/contact", "Optimisation des performances"]
+      },
+      {
+        "name": "Premium",
+        "description": "Pour les entreprises avec des besoins uniques et des objectifs ambitieux.",
+        "features": ["Solution entièrement personnalisée", "Tableau de bord admin", "Intégrations avancées", "Fonctionnalités sur mesure", "Support prioritaire"]
+      }
+    ]
+  },
+  "testimonials": {
+    "label": "Projets Exemples",
+    "heading": "Travaux Réalisés",
+    "description": "Projets de démonstration illustrant la qualité et la variété des sites que je construis. Remplaçables par des projets clients réels lorsqu'ils seront disponibles.",
+    "items": [
+      {
+        "title": "Projet Démo — Site Restaurant",
+        "category": "Site d'Entreprise",
+        "description": "Créé pour démontrer une expérience de restaurant en ligne moderne avec menus interactifs, système de réservation et narration visuelle."
+      },
+      {
+        "title": "Projet Démo — Site Club de Fitness",
+        "category": "Page d'Atterrissage",
+        "description": "Créé pour présenter les abonnements, les horaires et la génération de leads pour une marque de fitness moderne."
+      },
+      {
+        "title": "Projet Démo — Site Cabinet Dentaire",
+        "category": "Site Santé",
+        "description": "Créé pour démontrer la prise de rendez-vous en ligne, l'image de marque professionnelle et l'éducation des patients."
+      }
+    ]
+  },
+  "faq": {
+    "label": "FAQ",
+    "heading": "Questions Fréquentes",
+    "description": "Réponses aux questions courantes sur mes services et mon processus de travail.",
+    "items": [
+      {
+        "question": "Combien de temps faut-il pour créer un site web ?",
+        "answer": "Un site web standard prend généralement 5 à 10 jours du début au lancement. Le délai dépend de la complexité de votre projet et de la rapidité de vos retours sur les designs. Je fournis toujours un calendrier clair avant de commencer tout projet."
+      },
+      {
+        "question": "Proposez-vous l'hébergement ?",
+        "answer": "Je ne fournis pas d'hébergement directement, mais je vous aide à mettre en place un hébergement fiable et je gère tout le processus de déploiement. Je recommande des fournisseurs de confiance et peux gérer la configuration technique pour que votre site fonctionne parfaitement."
+      },
+      {
+        "question": "Pouvez-vous refondre un site existant ?",
+        "answer": "Absolument. Je suis spécialisé dans la refonte de sites obsolètes pour leur donner un look moderne et frais. Je préserve votre identité de marque tout en améliorant le design, les performances et l'expérience utilisateur."
+      },
+      {
+        "question": "Comment fonctionnent les paiements ?",
+        "answer": "Je demande un acompte de 50% pour démarrer le projet et les 50% restants à la fin, après votre approbation. Les paiements sont acceptés par virement bancaire ou autres méthodes convenues. Chaque détail est discuté et convenu avant le début du travail."
+      },
+      {
+        "question": "Puis-je modifier le site plus tard ?",
+        "answer": "Oui. Je construis des sites faciles à mettre à jour. Selon vos besoins, je peux inclure un système de gestion de contenu simple ou vous former pour effectuer vous-même les modifications de base. Je propose également des services de maintenance continue si vous préférez."
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Prêt à Développer Votre Entreprise en Ligne ?",
+    "description": "Obtenez un site web moderne et professionnel qui aide vos clients à découvrir votre entreprise, à faire confiance à votre marque et à vous contacter facilement.",
+    "contactWhatsApp": "Contactez-moi sur WhatsApp",
+    "freeConsultation": "Demander un Devis Gratuit"
+  },
+  "contact": {
+    "label": "Me Contacter",
+    "heading": "Construisons Votre Prochain Site Web",
+    "description": "Prêt à lancer votre entreprise en ligne ? Contactez-moi et créons ensemble quelque chose de formidable.",
+    "trustMessage": "La plupart des projets commencent par une conversation rapide sur WhatsApp.",
+    "chatWhatsApp": "Discuter sur WhatsApp",
+    "orDivider": "ou envoyez un message",
+    "formName": "Nom Complet",
+    "formNamePlaceholder": "Votre nom",
+    "formEmail": "Adresse Email",
+    "formEmailPlaceholder": "vous@exemple.com",
+    "formMessage": "Message",
+    "formMessagePlaceholder": "Parlez-moi de votre projet...",
+    "formSubmit": "Envoyer le Message"
+  },
+  "footer": {
+    "description": "Des sites web modernes pour les entreprises algériennes. J'aide les entreprises à obtenir des sites rapides, modernes et adaptés aux mobiles qui attirent des clients et inspirent confiance.",
+    "quickLinks": "Liens Rapides",
+    "connect": "Réseaux",
+    "copyright": "Tous droits réservés."
+  }
+}

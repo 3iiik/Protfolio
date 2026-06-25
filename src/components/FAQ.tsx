@@ -1,37 +1,13 @@
 "use client";
 
 import { useState } from "react";
-
-const faqs = [
-  {
-    question: "How long does a website take?",
-    answer:
-      "A standard business website typically takes 5 to 10 days from start to launch. The timeline depends on the complexity of your project and how quickly you provide feedback on designs. I always provide a clear timeline before starting any project.",
-  },
-  {
-    question: "Do you provide hosting?",
-    answer:
-      "I do not provide hosting directly, but I help you set up reliable hosting and handle the entire deployment process. I recommend trusted providers and can manage the technical setup so your website runs smoothly.",
-  },
-  {
-    question: "Can you redesign an existing website?",
-    answer:
-      "Absolutely. I specialize in redesigning outdated websites and giving them a fresh, modern look. I will preserve your brand identity while improving design, performance, and user experience.",
-  },
-  {
-    question: "How do payments work?",
-    answer:
-      "I require a 50% deposit to start the project and the remaining 50% upon completion and your approval. Payments are accepted via bank transfer or other agreed methods. Every detail is discussed and agreed upon before work begins.",
-  },
-  {
-    question: "Can I update the website later?",
-    answer:
-      "Yes. I build websites that are easy to update. Depending on your needs, I can include a simple content management system or provide training so you can make basic updates yourself. I also offer ongoing maintenance services if you prefer.",
-  },
-];
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const { t, tm } = useLanguage();
+
+  const faqs = (tm("faq.items") as { question: string; answer: string }[]);
 
   const toggle = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -42,13 +18,13 @@ export default function FAQ() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <span className="text-xs font-semibold tracking-widest text-primary uppercase">
-            FAQ
+            {t("faq.label")}
           </span>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Frequently Asked Questions
+            {t("faq.heading")}
           </h2>
           <p className="mt-4 text-lg text-muted">
-            Answers to common questions about my services and process.
+            {t("faq.description")}
           </p>
         </div>
 
