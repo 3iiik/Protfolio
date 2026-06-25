@@ -3,6 +3,7 @@ const plans = [
     name: "Starter",
     price: "15,000",
     currency: "DZD",
+    prefix: "Starting from",
     description: "Perfect for small businesses that need a simple online presence.",
     popular: false,
     features: [
@@ -17,6 +18,7 @@ const plans = [
     name: "Business",
     price: "35,000",
     currency: "DZD",
+    prefix: "Starting from",
     description: "Ideal for growing businesses that want a professional edge.",
     popular: true,
     features: [
@@ -30,7 +32,8 @@ const plans = [
   {
     name: "Premium",
     price: "60,000",
-    currency: "DZD+",
+    currency: "DZD",
+    prefix: "Starting from",
     description: "For businesses with unique requirements and ambitious goals.",
     popular: false,
     features: [
@@ -83,12 +86,17 @@ export default function Pricing() {
               </p>
 
               <div className="mt-6">
-                <span className={`text-4xl font-bold ${plan.popular ? "text-white" : "text-foreground"}`}>
-                  {plan.price}
+                <span className={`text-sm font-medium ${plan.popular ? "text-white/70" : "text-muted"}`}>
+                  {plan.prefix}
                 </span>
-                <span className={`ml-1 text-lg ${plan.popular ? "text-white/80" : "text-muted"}`}>
-                  {plan.currency}
-                </span>
+                <div className="mt-1">
+                  <span className={`text-4xl font-bold ${plan.popular ? "text-white" : "text-foreground"}`}>
+                    {plan.price}
+                  </span>
+                  <span className={`ml-1 text-lg ${plan.popular ? "text-white/80" : "text-muted"}`}>
+                    {plan.currency}
+                  </span>
+                </div>
               </div>
 
               <ul className="mt-8 space-y-4">
@@ -115,7 +123,7 @@ export default function Pricing() {
                 href="https://wa.me/213XXXXXXXXX"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`mt-8 inline-flex h-12 w-full items-center justify-center rounded-full text-sm font-semibold transition-all ${
+                className={`mt-8 inline-flex h-12 w-full items-center justify-center rounded-full text-sm font-semibold transition-all active:scale-95 ${
                   plan.popular
                     ? "bg-white text-primary hover:bg-white/90"
                     : "bg-foreground text-white hover:bg-foreground/90"
@@ -127,9 +135,9 @@ export default function Pricing() {
           ))}
         </div>
 
-        <p className="mt-10 text-center text-sm text-muted">
-          Final pricing depends on project requirements and complexity. Contact
-          me for a free quote.
+        <p className="mt-10 text-center text-sm text-muted max-w-xl mx-auto">
+          Final pricing depends on project requirements, complexity, and requested features.
+          Contact me for a free, personalized quote.
         </p>
       </div>
     </section>

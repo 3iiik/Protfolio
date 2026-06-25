@@ -5,7 +5,7 @@ export default function Hero() {
         <div className="mx-auto max-w-3xl text-center">
           <div className="animate-fade-in-up">
             <span className="inline-block rounded-full bg-primary-light px-4 py-1.5 text-xs font-semibold tracking-wide text-primary uppercase">
-              Freelance Web Developer — Algeria
+              Web Design &amp; Development — Algeria
             </span>
           </div>
 
@@ -22,7 +22,7 @@ export default function Hero() {
           <div className="animate-fade-in-up animate-fade-in-up-delay-3 mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="#projects"
-              className="inline-flex h-12 w-full sm:w-auto items-center justify-center rounded-full bg-foreground px-8 text-sm font-semibold text-white transition-all hover:bg-foreground/90 shadow-lg shadow-foreground/10"
+              className="inline-flex h-12 w-full sm:w-auto items-center justify-center rounded-full bg-foreground px-8 text-sm font-semibold text-white transition-all hover:bg-foreground/90 active:scale-95 shadow-lg shadow-foreground/10"
             >
               View Projects
             </a>
@@ -30,7 +30,7 @@ export default function Hero() {
               href="https://wa.me/213XXXXXXXXX"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-full border-2 border-primary px-8 text-sm font-semibold text-primary transition-all hover:bg-primary hover:text-white"
+              className="inline-flex h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-full border-2 border-primary px-8 text-sm font-semibold text-primary transition-all hover:bg-primary hover:text-white active:scale-95"
             >
               <svg
                 className="h-5 w-5"

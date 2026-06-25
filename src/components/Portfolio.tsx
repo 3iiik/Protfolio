@@ -1,6 +1,7 @@
 const projects = [
   {
     title: "Le Jardin Restaurant",
+    category: "Restaurant Website",
     description:
       "A complete digital presence for a high-end restaurant featuring an interactive menu, online reservation system, and a beautiful gallery showcasing their cuisine and ambiance.",
     tags: ["Next.js", "Tailwind CSS", "Reservation System"],
@@ -17,6 +18,7 @@ const projects = [
   },
   {
     title: "Atlas Fitness Club",
+    category: "Fitness Website",
     description:
       "A modern, energetic website for a premium gym featuring class schedules, membership plans, trainer profiles, and a seamless booking system for personal training sessions.",
     tags: ["React", "TypeScript", "Booking System"],
@@ -34,6 +36,7 @@ const projects = [
   },
   {
     title: "SmileCare Dental",
+    category: "Healthcare Website",
     description:
       "A professional healthcare website for a dental clinic with online appointment booking, service details, doctor profiles, patient testimonials, and educational content.",
     tags: ["Next.js", "Tailwind CSS", "Appointment System"],
@@ -71,19 +74,24 @@ export default function Portfolio() {
           {projects.map((project) => (
             <article
               key={project.title}
-              className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all hover:shadow-lg"
+              className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
             >
-              <div className="aspect-[4/3] overflow-hidden">
-                {project.image}
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <div className="absolute inset-0 transition-transform duration-500 group-hover:scale-105">
+                  {project.image}
+                </div>
               </div>
               <div className="flex flex-1 flex-col p-6">
-                <h3 className="text-xl font-semibold text-foreground">
+                <span className="inline-block self-start rounded-full bg-primary-light px-3 py-1 text-[11px] font-semibold text-primary">
+                  {project.category}
+                </span>
+                <h3 className="mt-3 text-xl font-semibold text-foreground">
                   {project.title}
                 </h3>
                 <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">
                   {project.description}
                 </p>
-                <div className="mt-4 flex flex-wrap gap-2">
+                <div className="mt-5 flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
@@ -96,13 +104,13 @@ export default function Portfolio() {
                 <div className="mt-6 flex gap-3">
                   <a
                     href="#contact"
-                    className="flex-1 rounded-full bg-foreground px-4 py-2.5 text-center text-xs font-semibold text-white transition-all hover:bg-foreground/90"
+                    className="flex-1 rounded-full bg-foreground px-4 py-2.5 text-center text-xs font-semibold text-white transition-all hover:bg-foreground/90 active:scale-95"
                   >
                     Live Demo
                   </a>
                   <a
                     href="#contact"
-                    className="flex-1 rounded-full border border-border px-4 py-2.5 text-center text-xs font-semibold text-foreground transition-all hover:bg-surface"
+                    className="flex-1 rounded-full border border-border px-4 py-2.5 text-center text-xs font-semibold text-foreground transition-all hover:bg-surface hover:border-foreground/20 active:scale-95"
                   >
                     View Details
                   </a>

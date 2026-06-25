@@ -77,9 +77,9 @@ export default function Services() {
           {services.map((service) => (
             <article
               key={service.title}
-              className="group rounded-2xl border border-border bg-card p-8 transition-all hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5"
+              className="group rounded-2xl border border-border bg-card p-8 transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5"
             >
-              <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary-light text-primary transition-colors group-hover:bg-primary group-hover:text-white">
+              <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary-light text-primary transition-all duration-300 group-hover:bg-primary group-hover:text-white group-hover:shadow-lg group-hover:shadow-primary/20">
                 {service.icon}
               </div>
               <h3 className="mt-6 text-xl font-semibold text-foreground">

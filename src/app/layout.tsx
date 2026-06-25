@@ -13,30 +13,31 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "3iik Studio | Modern Websites for Businesses",
+  title: "3iik Studio | Web Design & Development — Modern Websites for Algerian Businesses",
   description:
-    "Fast, professional, mobile-friendly websites designed to build trust and attract customers. Get a modern website for your business in Algeria.",
+    "Web design and development for Algerian businesses. Fast, professional, mobile-friendly websites that build trust and attract customers.",
   keywords: [
     "web development",
     "Algeria",
     "business websites",
     "freelance web developer",
     "3iik Studio",
-    "website designer",
+    "web design Algeria",
+    "website designer Algeria",
   ],
   openGraph: {
-    title: "3iik Studio | Modern Websites for Businesses",
+    title: "3iik Studio | Web Design & Development",
     description:
-      "Fast, professional, mobile-friendly websites designed to build trust and attract customers.",
+      "Modern websites for Algerian businesses. Professional web design and development services.",
     type: "website",
     locale: "en_DZ",
     siteName: "3iik Studio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "3iik Studio | Modern Websites for Businesses",
+    title: "3iik Studio | Web Design & Development",
     description:
-      "Fast, professional, mobile-friendly websites designed to build trust and attract customers.",
+      "Modern websites for Algerian businesses. Professional web design and development services.",
   },
   robots: {
     index: true,

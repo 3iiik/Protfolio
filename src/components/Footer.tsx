@@ -6,15 +6,17 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-8 py-12 sm:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-2">
-            <a href="#" className="flex items-center gap-2">
+            <a href="#" className="flex flex-col leading-tight">
               <span className="text-xl font-bold tracking-tight text-foreground">
-                3iik
+                3iik <span className="font-light text-muted">Studio</span>
               </span>
-              <span className="text-xl font-light text-muted">Studio</span>
+              <span className="text-[10px] font-medium tracking-wider text-primary uppercase">
+                Web Design &amp; Development
+              </span>
             </a>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted">
-              Modern Websites for Businesses. I help businesses get fast, modern,
-              and mobile-friendly websites that attract customers and build
+              Modern Websites for Algerian Businesses. I help businesses get fast,
+              modern, and mobile-friendly websites that attract customers and build
               trust.
             </p>
           </div>
