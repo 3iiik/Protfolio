@@ -1,11 +1,14 @@
 "use client";
 
+import { useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function Pricing() {
   const { t, tm } = useLanguage();
+  const [activeTab, setActiveTab] = useState<"web" | "app">("web");
 
-  const plans = (tm("pricing.plans") as {
+  const plansPath = activeTab === "web" ? "pricing.plans" : "pricing.appPlans";
+  const plans = (tm(plansPath) as {
     name: string;
     description: string;
     features: string[];
@@ -28,7 +31,32 @@ export default function Pricing() {
           </p>
         </div>
 
-        <div className="mt-16 grid gap-8 lg:grid-cols-3 items-start">
+        <div className="mt-12 flex justify-center">
+          <div className="inline-flex rounded-xl border border-border bg-surface p-1">
+            <button
+              onClick={() => setActiveTab("web")}
+              className={`rounded-lg px-5 py-2.5 text-sm font-semibold transition-all ${
+                activeTab === "web"
+                  ? "bg-primary text-white shadow-sm"
+                  : "text-muted hover:text-foreground"
+              }`}
+            >
+              {t("pricing.webTab")}
+            </button>
+            <button
+              onClick={() => setActiveTab("app")}
+              className={`rounded-lg px-5 py-2.5 text-sm font-semibold transition-all ${
+                activeTab === "app"
+                  ? "bg-primary text-white shadow-sm"
+                  : "text-muted hover:text-foreground"
+              }`}
+            >
+              {t("pricing.appTab")}
+            </button>
+          </div>
+        </div>
+
+        <div className="mt-12 grid gap-8 lg:grid-cols-3 items-start">
           {plans.map((plan, index) => (
             <div
               key={plan.name}

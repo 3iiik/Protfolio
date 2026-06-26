@@ -25,6 +25,13 @@ const projectsData = [
     githubUrl: "https://github.com/3iiik/SmileCare-Dental",
     tags: ["Next.js", "TypeScript", "Tailwind CSS"],
   },
+  {
+    slug: "forca",
+    image: "/images/projects/forca.jpg",
+    demoUrl: "https://3iiik.github.io/Forca/",
+    githubUrl: "https://github.com/3iiik/Forca",
+    tags: ["Electron", "TypeScript", "WebSocket"],
+  },
 ];
 
 export default function Portfolio() {

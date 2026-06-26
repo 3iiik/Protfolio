@@ -110,6 +110,11 @@
         "title": "SmileCare Dental",
         "category": "Healthcare Website",
         "description": "A professional healthcare website for a dental clinic with online appointment booking, service details, and patient education."
+      },
+      {
+        "title": "Forca",
+        "category": "Desktop App",
+        "description": "An open-source Windows productivity app that automatically blocks distracting websites using Focus Zones and a browser extension."
       }
     ],
     "liveDemo": "Live Demo",
@@ -151,6 +156,8 @@
     "label": "Pricing",
     "heading": "Transparent Pricing",
     "description": "Quality websites at fair prices. No hidden fees, no surprises.",
+    "webTab": "Web Development",
+    "appTab": "App Development",
     "popular": "Most Popular",
     "startingFrom": "Starting from",
     "getStarted": "Get Started",
@@ -170,6 +177,23 @@
         "name": "Premium",
         "description": "For businesses with unique requirements and ambitious goals.",
         "features": ["Fully custom solution", "Admin dashboard", "Advanced integrations", "Custom functionality", "Priority support"]
+      }
+    ],
+    "appPlans": [
+      {
+        "name": "Starter",
+        "description": "Perfect for a simple app with essential features.",
+        "features": ["Up to 5 screens", "Responsive design", "Contact form", "Basic SEO", "Fast delivery"]
+      },
+      {
+        "name": "Business",
+        "description": "Ideal for apps with advanced features and a polished UX.",
+        "features": ["Custom design", "Up to 10 screens", "Performance optimization", "Push notifications", "User authentication"]
+      },
+      {
+        "name": "Premium",
+        "description": "For complex apps with unique needs and advanced integrations.",
+        "features": ["Fully custom solution", "Admin dashboard", "Advanced API integrations", "Custom features", "Priority support"]
       }
     ]
   },

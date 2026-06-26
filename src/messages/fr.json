@@ -110,6 +110,11 @@
         "title": "SmileCare Dental",
         "category": "Site Santé",
         "description": "Un site professionnel pour un cabinet dentaire avec prise de rendez-vous en ligne, détails des services et avis patients."
+      },
+      {
+        "title": "Forca",
+        "category": "Application Bureau",
+        "description": "Une application de productivité open-source pour Windows qui bloque automatiquement les sites distrayants grâce à des zones de focus et une extension navigateur."
       }
     ],
     "liveDemo": "Démo en Direct",
@@ -151,6 +156,8 @@
     "label": "Tarifs",
     "heading": "Tarification Transparente",
     "description": "Des sites de qualité à des prix justes. Sans frais cachés, sans surprises.",
+    "webTab": "Développement Web",
+    "appTab": "Développement App",
     "popular": "Le Plus Populaire",
     "startingFrom": "À partir de",
     "getStarted": "Commencer",
@@ -170,6 +177,23 @@
         "name": "Premium",
         "description": "Pour les entreprises avec des besoins uniques et des objectifs ambitieux.",
         "features": ["Solution entièrement personnalisée", "Tableau de bord admin", "Intégrations avancées", "Fonctionnalités sur mesure", "Support prioritaire"]
+      }
+    ],
+    "appPlans": [
+      {
+        "name": "Starter",
+        "description": "Parfait pour une application simple avec des fonctionnalités essentielles.",
+        "features": ["Jusqu'à 5 écrans", "Design responsive", "Formulaire de contact", "SEO de base", "Livraison rapide"]
+      },
+      {
+        "name": "Business",
+        "description": "Idéal pour les applications avec des fonctionnalités avancées et une belle UX.",
+        "features": ["Design personnalisé", "Jusqu'à 10 écrans", "Optimisation des performances", "Notifications push", "Authentification utilisateur"]
+      },
+      {
+        "name": "Premium",
+        "description": "Pour les applications complexes avec des besoins uniques et des intégrations avancées.",
+        "features": ["Solution entièrement personnalisée", "Tableau de bord admin", "Intégrations API avancées", "Fonctionnalités sur mesure", "Support prioritaire"]
       }
     ]
   },
