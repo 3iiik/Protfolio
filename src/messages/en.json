@@ -19,7 +19,7 @@
   "hero": {
     "badge": "Web Design & Development — Algeria",
     "title": "Modern Websites That Help Businesses",
-    "titleAccent": "Grow",
+    "titleAccent": ["Grow", "Sell", "Convert", "Scale", "Succeed", "Lead"],
     "subtitle": "Fast, professional, mobile-friendly websites designed to build trust and attract customers. Get a website that works as hard as you do.",
     "viewProjects": "View Projects",
     "contactMessenger": "Contact on Instagram"

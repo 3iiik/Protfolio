@@ -19,7 +19,7 @@
   "hero": {
     "badge": "Développement & Conception Web — Algérie",
     "title": "Des Sites Web Modernes Qui Aident les Entreprises à",
-    "titleAccent": "Grandir",
+    "titleAccent": ["Grandir", "Vendre", "Attirer des Clients", "Se Développer", "Réussir", "Convertir"],
     "subtitle": "Des sites rapides, professionnels et adaptés aux mobiles, conçus pour inspirer confiance et attirer des clients. Obtenez un site web qui travaille aussi dur que vous.",
     "viewProjects": "Voir les Projets",
     "contactMessenger": "Contacter sur Instagram"

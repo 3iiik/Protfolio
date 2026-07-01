@@ -9,10 +9,12 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "next": "16.2.9",
+    "clsx": "^2.1.1",
+    "motion": "^12.42.2",
     "puppeteer": "^25.2.1",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "tailwind-merge": "^3.6.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
@@ -21,6 +23,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.9",
+    "next": "^16.2.9",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

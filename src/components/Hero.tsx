@@ -1,9 +1,10 @@
 "use client";
 
 import { useLanguage } from "@/context/LanguageContext";
+import Typewriter from "@/components/ui/typewriter";
 
 export default function Hero() {
-  const { t } = useLanguage();
+  const { t, tm } = useLanguage();
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-surface via-white to-primary-light pt-32 pb-20 sm:pt-40 sm:pb-28">
@@ -17,7 +18,15 @@ export default function Hero() {
 
           <h1 className="animate-fade-in-up animate-fade-in-up-delay-1 mt-6 text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl leading-[1.1]">
             {t("hero.title")}{" "}
-            <span className="text-primary">{t("hero.titleAccent")}</span>
+            <Typewriter
+              as="span"
+              text={tm("hero.titleAccent") as string[]}
+              speed={70}
+              deleteSpeed={40}
+              waitTime={1500}
+              cursorChar="|"
+              className="text-primary"
+            />
           </h1>
 
           <p className="animate-fade-in-up animate-fade-in-up-delay-2 mt-6 text-lg leading-relaxed text-muted sm:text-xl max-w-2xl mx-auto">
