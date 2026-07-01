@@ -70,7 +70,7 @@ export default function Pricing() {
           </div>
         </div>
 
-        <div className="mt-12 grid gap-8 lg:grid-cols-3 items-start">
+        <div className="mt-12 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {plans.map((plan, index) => {
             const isMostPopular = index === 1;
             const isBestValue = activeTab === "qrMenu" && index === 2;
@@ -78,7 +78,7 @@ export default function Pricing() {
             return (
               <div
                 key={plan.name}
-                className={`relative flex flex-col rounded-2xl border p-8 ${
+                className={`relative flex h-full flex-col rounded-2xl border p-8 ${
                   isMostPopular
                     ? "border-primary bg-primary text-white shadow-xl shadow-primary/20"
                     : "border-border bg-card"
@@ -116,7 +116,7 @@ export default function Pricing() {
                   </div>
                 </div>
 
-                <ul className="mt-8 space-y-4">
+                <ul className="mt-8 flex-1 space-y-4">
                   {plan.features.map((feature: string) => (
                     <li key={feature} className="flex items-center gap-3 text-sm">
                       <svg
@@ -140,7 +140,7 @@ export default function Pricing() {
                   href="https://instagram.com/3iik.dev"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`mt-8 inline-flex h-12 w-full items-center justify-center rounded-full text-sm font-semibold transition-all active:scale-95 ${
+                  className={`mt-auto inline-flex h-12 w-full items-center justify-center rounded-full text-sm font-semibold transition-all active:scale-95 ${
                     isMostPopular
                       ? "bg-white text-primary hover:bg-white/90"
                       : "bg-foreground text-white hover:bg-foreground/90"
