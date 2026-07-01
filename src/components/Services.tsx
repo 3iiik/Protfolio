@@ -3,7 +3,8 @@
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function Services() {
-  const { t, tm } = useLanguage();
+  const { t, tm, locale } = useLanguage();
+  const isRtl = locale === "ar";
 
   const services = [
     {
@@ -74,15 +75,17 @@ export default function Services() {
             return (
               <article
                 key={service.key}
-                className="group rounded-2xl border border-border bg-card p-8 transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5"
+                className="group flex flex-col rounded-2xl border border-border bg-card p-8 transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5"
               >
-                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary-light text-primary transition-all duration-300 group-hover:bg-primary group-hover:text-white group-hover:shadow-lg group-hover:shadow-primary/20">
-                  {service.icon}
+                <div className={`flex items-center gap-4 ${isRtl ? "flex-row-reverse" : ""}`}>
+                  <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-xl bg-primary-light text-primary transition-all duration-300 group-hover:bg-primary group-hover:text-white group-hover:shadow-lg group-hover:shadow-primary/20">
+                    {service.icon}
+                  </div>
+                  <h3 className={`text-xl font-semibold text-foreground ${isRtl ? "text-right" : ""}`}>
+                    {itemData.title}
+                  </h3>
                 </div>
-                <h3 className="mt-6 text-xl font-semibold text-foreground">
-                  {itemData.title}
-                </h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted">
+                <p className={`mt-4 text-sm leading-relaxed text-muted ${isRtl ? "text-right" : ""}`}>
                   {itemData.description}
                 </p>
                 <ul className="mt-6 space-y-2">

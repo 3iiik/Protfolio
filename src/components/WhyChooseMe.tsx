@@ -3,7 +3,7 @@
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function WhyChooseMe() {
-  const { t, tm } = useLanguage();
+  const { t, tm, locale } = useLanguage();
 
   const icons: React.ReactNode[] = [
     <svg key="icon-0" className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true">
@@ -29,6 +29,7 @@ export default function WhyChooseMe() {
     </svg>,
   ];
 
+  const isRtl = locale === "ar";
   const reasons = (tm("whyChooseMe.reasons") as { title: string; description: string }[]);
 
   return (
@@ -48,11 +49,11 @@ export default function WhyChooseMe() {
 
         <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {reasons.map((reason, index) => (
-            <div key={reason.title} className="flex gap-4 group">
+            <div key={reason.title} className={`flex gap-4 group ${isRtl ? "flex-row-reverse" : ""}`}>
               <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-primary-light text-primary transition-all duration-300 group-hover:bg-primary group-hover:text-white group-hover:shadow-lg group-hover:shadow-primary/20">
                 {icons[index]}
               </div>
-              <div>
+              <div className={isRtl ? "text-right" : ""}>
                 <h3 className="text-lg font-semibold text-foreground transition-colors duration-300 group-hover:text-primary">
                   {reason.title}
                 </h3>

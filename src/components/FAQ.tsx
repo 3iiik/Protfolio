@@ -5,7 +5,8 @@ import { useLanguage } from "@/context/LanguageContext";
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const { t, tm } = useLanguage();
+  const { t, tm, locale } = useLanguage();
+  const isRtl = locale === "ar";
 
   const faqs = (tm("faq.items") as { question: string; answer: string }[]);
 
@@ -34,7 +35,7 @@ export default function FAQ() {
               <button
                 type="button"
                 onClick={() => toggle(index)}
-                className="flex w-full items-center justify-between text-left"
+                className={`flex w-full items-center justify-between ${isRtl ? "text-right" : "text-left"}`}
                 aria-expanded={openIndex === index}
               >
                 <span className="text-base font-semibold text-foreground pr-4">

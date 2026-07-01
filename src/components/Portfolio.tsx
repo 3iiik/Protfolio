@@ -42,7 +42,8 @@ const projectsData = [
 ];
 
 export default function Portfolio() {
-  const { t, tm } = useLanguage();
+  const { t, tm, locale } = useLanguage();
+  const isRtl = locale === "ar";
 
   const projects = (tm("portfolio.projects") as { title: string; category: string; description: string }[]);
 
@@ -79,16 +80,16 @@ export default function Portfolio() {
                   />
                 </div>
                 <div className="flex flex-1 flex-col p-6">
-                  <span className="inline-block self-start rounded-full bg-primary-light px-3 py-1 text-[11px] font-semibold text-primary">
+                  <span className={`inline-block rounded-full bg-primary-light px-3 py-1 text-[11px] font-semibold text-primary ${isRtl ? "self-end" : "self-start"}`}>
                     {project.category}
                   </span>
-                  <h3 className="mt-3 text-xl font-semibold text-foreground">
+                  <h3 className={`mt-3 text-xl font-semibold text-foreground ${isRtl ? "text-center" : ""}`}>
                     {project.title}
                   </h3>
-                  <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">
+                  <p className={`mt-3 flex-1 text-sm leading-relaxed text-muted ${isRtl ? "text-right" : ""}`}>
                     {project.description}
                   </p>
-                  <div className="mt-5 flex flex-wrap gap-2">
+                  <div className={`mt-5 flex flex-wrap gap-2 ${isRtl ? "justify-center" : ""}`}>
                     {data.tags.map((tag) => (
                       <span
                         key={tag}
