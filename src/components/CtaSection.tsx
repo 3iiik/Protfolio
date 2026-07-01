@@ -3,12 +3,13 @@
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function CtaSection() {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
+  const isRtl = locale === "ar";
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-foreground via-foreground to-primary/90 py-20 sm:py-28">
-      <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-primary/20 blur-3xl" aria-hidden="true" />
-      <div className="absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-white/5 blur-3xl" aria-hidden="true" />
+      <div className={`absolute -top-40 ${isRtl ? "-left-40" : "-right-40"} h-80 w-80 rounded-full bg-primary/20 blur-3xl`} aria-hidden="true" />
+      <div className={`absolute -bottom-40 ${isRtl ? "-right-40" : "-left-40"} h-80 w-80 rounded-full bg-white/5 blur-3xl`} aria-hidden="true" />
 
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">

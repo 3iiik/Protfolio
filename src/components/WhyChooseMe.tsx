@@ -49,11 +49,11 @@ export default function WhyChooseMe() {
 
         <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {reasons.map((reason, index) => (
-            <div key={reason.title} className={`flex gap-4 group ${isRtl ? "flex-row-reverse" : ""}`}>
+            <div key={reason.title} className={`flex gap-4 group w-full ${isRtl ? "flex-row-reverse" : ""}`}>
               <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-primary-light text-primary transition-all duration-300 group-hover:bg-primary group-hover:text-white group-hover:shadow-lg group-hover:shadow-primary/20">
                 {icons[index]}
               </div>
-              <div className={isRtl ? "text-right" : ""}>
+              <div className={`flex-1 ${isRtl ? "text-right" : ""}`}>
                 <h3 className="text-lg font-semibold text-foreground transition-colors duration-300 group-hover:text-primary">
                   {reason.title}
                 </h3>

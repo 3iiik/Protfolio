@@ -3,7 +3,8 @@
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function Process() {
-  const { t, tm } = useLanguage();
+  const { t, tm, locale } = useLanguage();
+  const isRtl = locale === "ar";
 
   const steps = (tm("process.steps") as { number: string; title: string; description: string }[]);
 
@@ -29,7 +30,7 @@ export default function Process() {
                 {step.number}
               </div>
               {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-8 left-[calc(50%+2.5rem)] w-[calc(100%-5rem)] border-t-2 border-dashed border-primary/20" aria-hidden="true" />
+                <div className={`hidden md:block absolute top-8 ${isRtl ? "right-[calc(50%+2.5rem)]" : "left-[calc(50%+2.5rem)]"} w-[calc(100%-5rem)] border-t-2 border-dashed border-primary/20`} aria-hidden="true" />
               )}
               <h3 className="mt-6 text-lg font-semibold text-foreground">
                 {step.title}

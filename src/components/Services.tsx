@@ -85,7 +85,7 @@ export default function Services() {
                     {itemData.title}
                   </h3>
                 </div>
-                <p className={`mt-4 text-sm leading-relaxed text-muted ${isRtl ? "text-right" : ""}`}>
+                <p className={`mt-4 flex-1 text-sm leading-relaxed text-muted ${isRtl ? "text-right" : ""}`}>
                   {itemData.description}
                 </p>
                 <ul className="mt-6 space-y-2">
