@@ -3,19 +3,13 @@
 import {
   createContext,
   useContext,
-  useState,
   useEffect,
   useCallback,
   type ReactNode,
 } from "react";
-
-import fr from "@/messages/fr.json";
-import en from "@/messages/en.json";
-import ar from "@/messages/ar.json";
+import { useParams, usePathname, useRouter } from "next/navigation";
 
 export type Locale = "fr" | "en" | "ar";
-
-const messages: Record<Locale, Record<string, unknown>> = { fr, en, ar };
 
 type LanguageContextType = {
   locale: Locale;
@@ -25,9 +19,9 @@ type LanguageContextType = {
   dir: "ltr" | "rtl";
 };
 
-const isRtl = (locale: Locale) => locale === "ar";
-
 const LanguageContext = createContext<LanguageContextType | null>(null);
+
+const isRtl = (locale: Locale) => locale === "ar";
 
 function getNested(obj: unknown, path: string): unknown {
   const keys = path.split(".");
@@ -42,61 +36,60 @@ function getNested(obj: unknown, path: string): unknown {
   return current;
 }
 
-const STORAGE_KEY = "3iik-locale";
+export function LanguageProvider({
+  children,
+  locale: initialLocale,
+  messages,
+}: {
+  children: ReactNode;
+  locale: Locale;
+  messages: Record<string, unknown>;
+}) {
+  const params = useParams();
+  const pathname = usePathname();
+  const router = useRouter();
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocaleState] = useState<Locale>("fr");
-  const [mounted, setMounted] = useState(false);
+  const locale = (params?.locale as Locale) || initialLocale;
 
-  useEffect(() => {
-    const stored = localStorage.getItem(STORAGE_KEY);
-    if (stored === "fr" || stored === "en" || stored === "ar") {
-      // eslint-disable-next-line react-hooks/set-state-in-effect
-      setLocaleState(stored);
-    }
-    setMounted(true);
-  }, []);
+  const setLocale = useCallback(
+    (newLocale: Locale) => {
+      const currentPath = pathname.replace(/^\/(fr|en|ar)(\/|$)/, "/");
+      const newPath = `/${newLocale}${currentPath === "/" ? "" : currentPath}${window.location.hash}`;
+      router.push(newPath);
+    },
+    [pathname, router],
+  );
 
   useEffect(() => {
     document.documentElement.dir = isRtl(locale) ? "rtl" : "ltr";
     document.documentElement.lang = locale;
   }, [locale]);
 
-  const setLocale = useCallback((newLocale: Locale) => {
-    setLocaleState(newLocale);
-    localStorage.setItem(STORAGE_KEY, newLocale);
-  }, []);
-
   const t = useCallback(
     (path: string): string => {
-      const val = getNested(messages[locale], path);
+      const val = getNested(messages, path);
       return typeof val === "string" ? val : path;
     },
-    [locale]
+    [messages],
   );
 
   const tm = useCallback(
     (path: string): unknown => {
-      return getNested(messages[locale], path);
+      return getNested(messages, path);
     },
-    [locale]
+    [messages],
   );
 
-  if (!mounted) {
-    const fallbackT = (path: string): string => {
-      const val = getNested(messages.fr, path);
-      return typeof val === "string" ? val : path;
-    };
-    const fallbackTm = (path: string): unknown => getNested(messages.fr, path);
-    return (
-      <LanguageContext.Provider value={{ locale: "fr", setLocale, t: fallbackT, tm: fallbackTm, dir: "ltr" }}>
-        {children}
-      </LanguageContext.Provider>
-    );
-  }
-
   return (
-    <LanguageContext.Provider value={{ locale, setLocale, t, tm, dir: isRtl(locale) ? "rtl" : "ltr" }}>
+    <LanguageContext.Provider
+      value={{
+        locale,
+        setLocale,
+        t,
+        tm,
+        dir: isRtl(locale) ? "rtl" : "ltr",
+      }}
+    >
       {children}
     </LanguageContext.Provider>
   );

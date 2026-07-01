@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Cairo } from "next/font/google";
-import { LanguageProvider } from "@/context/LanguageContext";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -21,8 +20,6 @@ const cairo = Cairo({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://3iik-studio.vercel.app"),
-  title: "3iik Studio | Web Services & Digital Solutions",
-  description: "Modern Web Solutions for Algerian Businesses",
   keywords: [
     "web services",
     "digital solutions",
@@ -35,16 +32,7 @@ export const metadata: Metadata = {
     "développeur web Algérie",
     "solutions web Algérie",
   ],
-  alternates: {
-    languages: {
-      fr: "/",
-      en: "/",
-      ar: "/",
-    },
-  },
   openGraph: {
-    title: "3iik Studio | Web Services & Digital Solutions",
-    description: "Modern Web Solutions for Algerian Businesses",
     type: "website",
     locale: "fr_DZ",
     siteName: "3iik Studio",
@@ -59,8 +47,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "3iik Studio | Web Services & Digital Solutions",
-    description: "Modern Web Solutions for Algerian Businesses",
     images: ["/og-image.png"],
   },
   robots: {
@@ -80,14 +66,8 @@ export default function RootLayout({
       dir="ltr"
       className={`${geistSans.variable} ${geistMono.variable} ${cairo.variable} antialiased`}
     >
-      <head>
-        <link rel="alternate" hrefLang="fr" href="/" />
-        <link rel="alternate" hrefLang="en" href="/" />
-        <link rel="alternate" hrefLang="ar" href="/" />
-        <link rel="alternate" hrefLang="x-default" href="/" />
-      </head>
       <body className="min-h-screen bg-background text-foreground">
-        <LanguageProvider>{children}</LanguageProvider>
+        {children}
       </body>
     </html>
   );
