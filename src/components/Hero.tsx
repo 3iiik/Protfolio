@@ -24,9 +24,10 @@ export default function Hero() {
               text={tm("hero.titleAccent") as string[]}
               speed={70}
               deleteSpeed={40}
-              waitTime={1500}
+              waitTime={1800}
               cursorChar="|"
               className="text-primary"
+              fadeMode={locale === "ar"}
             />
           </h1>
 
